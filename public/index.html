@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Pico y Placa</title>
+  </head>
+  <body>
+    <h1 class="title">Pico y Placa</h1>
+
+    <div class="message" id="message" hidden></div>
+
+    <div class="input-container">
+      <input class="input" type="text" id="plate" placeholder="ABC1234" />
+      <span class="error" id="plateError" hidden>
+        El formato de placa debe ser 3 caractéres y 4 dígitos seguidos
+      </span>
+    </div>
+    <div class="input-container">
+      <input class="input" type="date" id="date" />
+      <span class="error" id="dateError" hidden>Formato de fecha inválido</span>
+    </div>
+    <div class="input-container">
+      <input class="input" type="time" id="time" />
+      <span class="error" id="timeError" hidden>Formato de hora inválido</span>
+    </div>
+
+    <input class="button" id="submit" type="button" value="Comprobar" />
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-import canDrive, {isRestrictedTime, getPlateDay} from './index'
+import canDrive, {isRestrictedTime, getPlateDay} from './main'
 
 describe('can drive ', () => {
   const mondayPlate = 'PBH1231'

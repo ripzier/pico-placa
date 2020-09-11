@@ -10,21 +10,33 @@
     "format": "npm run prettier -- --write",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts)\"",
-    "validate": "npm-run-all --parallel check-types check-format lint build ",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "validate": "npm-run-all --parallel check-types check-format lint test build "
   },
   "devDependencies": {
     "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-typescript": "^7.10.4",
+    "@types/jest": "^26.0.13",
+    "@types/node": "^14.10.0",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
     "eslint": "^7.8.1",
     "eslint-config-prettier": "^6.11.0",
     "husky": "^4.3.0",
+    "jest": "^26.4.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.1",
+    "ts-jest": "^26.3.0",
     "typescript": "^4.0.2"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    }
   }
 }

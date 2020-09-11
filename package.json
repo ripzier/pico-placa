@@ -4,20 +4,17 @@
   "description": "Small app to tell if a car can drive given a date and time",
   "author": "Rómulo Soliz",
   "scripts": {
-    "build": "babel src --extensions .js,.ts --out-dir dist",
-    "check-format": "npm run prettier -- --list-different",
+    "build": "parcel build public/index.html",
+    "check-format": "npm run prettier -- --check",
     "check-types": "tsc",
     "format": "npm run prettier -- --write",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
-    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts)\"",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts)\" -c",
+    "start": "parcel public/index.html --open --port 8080",
     "test": "jest",
-    "validate": "npm-run-all --parallel check-types check-format lint test build "
+    "validate": "npm-run-all --parallel check-types check-format lint test build"
   },
   "devDependencies": {
-    "@babel/cli": "^7.11.6",
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "@babel/preset-typescript": "^7.10.4",
     "@types/jest": "^26.0.13",
     "@types/node": "^14.10.0",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
@@ -27,6 +24,7 @@
     "husky": "^4.3.0",
     "jest": "^26.4.2",
     "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
     "prettier": "^2.1.1",
     "ts-jest": "^26.3.0",
     "typescript": "^4.0.2"

@@ -1,6 +1,7 @@
 # Dependency directories
 node_modules/
 
-# Generated output
+# Parcel generated folders
+.cache
 dist
 
